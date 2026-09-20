@@ -9,7 +9,7 @@ test('standard user can log in', async ({ page }) => {
     await page.getByPlaceholder('Password').fill('secret_sauce');
     await page.getByRole('button', { name: 'Login' }).click();
 
-    await expect(page.getByText('Orders', { exact: true })).toBeVisible();
+    await expect(page.getByText('Products', { exact: true })).toBeVisible();
 });
 
 test('standard user cannot log in with an invalid password', async ({ page }) => {
